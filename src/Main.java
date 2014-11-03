@@ -47,6 +47,8 @@ public class Main {
             return true;
         } else if (Math.abs(harfListesi.indexOf(kelime.get(kelime.size() - 1)) - harfListesi.indexOf(yeniHarf)) != 1) {
             return true;
+        // 'C' ve 'D' alfabetik olarak birbirini takip etmediği için (arada 'Ç' harfi var) yanyana gelebilir.
+        // Bu yüzden bu durumu exclude ediyoruz.
         } else if (kelime.get(kelime.size() - 1).equals("C") & yeniHarf.equals("D")) {
             return true;
         } else if (kelime.get(kelime.size() - 1).equals("D") & yeniHarf.equals("C")) {
